@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class ButtonLimiter : MonoBehaviour
 {
     private Vector3 _startPos;
@@ -9,22 +9,27 @@ public class ButtonLimiter : MonoBehaviour
     private float lowestAcceptableHeight = 0.05f;
     private float coolDownPeriod = 1f;
     private bool buttonIsInteractable = true;
-    private ButtonColorAudioController buttonMainController;
+    public UnityEvent ButtonPressedEvent; // Added an event to remove hard dependency. 
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        if (ButtonPressedEvent == null)
+            ButtonPressedEvent = new UnityEvent();
+        
         _startPos = transform.localPosition;
-        buttonMainController = GetComponent<ButtonColorAudioController>();
+
+        ///ButtonPressedEvent.AddListener(ButtonPressed); // <- How to add another listener without having to drag in in the hierachy 
+        ///ButtonPressedEvent.RemoveListener(ButtonPressed)// <- How to clean up event listener
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
         if (transform.localPosition.y < buttonPushedHeight && buttonIsInteractable)
         {
             buttonIsInteractable = false;
-            buttonMainController.ButtonWasPressed();
+            ButtonPressedEvent.Invoke();
+           
             StartCoroutine(Cooldown());
         }
 
@@ -39,4 +44,9 @@ public class ButtonLimiter : MonoBehaviour
         yield return new WaitForSeconds(coolDownPeriod);
         buttonIsInteractable = true;
     }
+
+    //void ButtonPressed()
+    //{
+
+    //}
 }
