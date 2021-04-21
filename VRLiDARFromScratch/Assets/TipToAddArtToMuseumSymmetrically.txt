@@ -1,0 +1,9 @@
+Protip to add paintings and plinths symmetrically to the museum.
+
+If your object is a ProBuilder object of width .5
+Place one at position X, the other at position (-X-0.5).
+E.g. painting A at X = -10, painting B at X = 9.5
+
+If your object is a Unity native shape (e.g. a cube) of width .5
+Place one at position x, the other at position (-x-1)
+E.g. painting A at x= -10.25, painting B at x = -9.25
