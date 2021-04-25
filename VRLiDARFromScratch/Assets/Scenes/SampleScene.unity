@@ -23546,21 +23546,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KirbyPlinth (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 6868538190290437641, guid: 274cb95d95eb34b4ca8d55c3c38226f4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6868538190290437641, guid: 274cb95d95eb34b4ca8d55c3c38226f4,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5153052
-      objectReference: {fileID: 0}
-    - target: {fileID: 6868538190290437641, guid: 274cb95d95eb34b4ca8d55c3c38226f4,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.50239015
-      objectReference: {fileID: 0}
     - target: {fileID: 7476779964639924110, guid: 274cb95d95eb34b4ca8d55c3c38226f4,
         type: 3}
       propertyPath: m_RootOrder
@@ -27215,16 +27200,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6868538190290437641, guid: 274cb95d95eb34b4ca8d55c3c38226f4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6868538190290437641, guid: 274cb95d95eb34b4ca8d55c3c38226f4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7476779964639924110, guid: 274cb95d95eb34b4ca8d55c3c38226f4,
         type: 3}
